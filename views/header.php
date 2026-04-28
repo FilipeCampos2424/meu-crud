@@ -21,5 +21,3 @@
 <body>
     <h1>CRUD de Tarefas (PHP + SQL)</h1>
     <hr>
-</body>
-</html>
