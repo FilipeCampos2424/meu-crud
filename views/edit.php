@@ -42,3 +42,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endforeach; ?>
 </ul>
 <?php endif; ?>
+
+<form method="post">
+    <p>
+        <label>Título<br>
+        <input name="titulo" value="<?= htmlspecialchars($titulo) ?>"
+        maxlength="120" style="width:100%;" required>
+        </label>
+    </p>
+
+    <p>
+        <label>Descrição<br>
+        <textarea name="descricao" rows="4" style="width:100%;"><?= htmlspecialchars($descricao) ?></textarea>
+        </label>
+    </p>
+
+    <p>
+        <label>Status<br>
+        <select name="status">
+            <option value="pendente" <?= status === 'pendente' ? 'selected' : '' ?>>pendente</option>
+        </select>
+        </label>
+    </p>
+
+    <button class="btn" type="submit">Atualizar</button>
+
+</form>
