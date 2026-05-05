@@ -6,7 +6,7 @@ $id = (int) ($_GET['id' ?? 0]);
 $tarefa = $id > 0 ? buscar_tarefa($id) : null;
 
 if (!$tarefa) {
-    echo "<p style'color:#a00;'>Tarefa não encontrada.</p>";
+    echo "<p style='color:#a00;'>Tarefa não encontrada.</p>";
     echo "<a class='btn' href='?acao=list'>Voltar</a>";
     return;
 }
@@ -60,7 +60,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p>
         <label>Status<br>
         <select name="status">
-            <option value="pendente" <?= status === 'pendente' ? 'selected' : '' ?>>pendente</option>
+            <option value="pendente" <?= $status === 'pendente' ? 'selected' : '' ?>>pendente</option>
+            <option value="feito" <?= $status === 'feito' ? 'selected' : '' ?>>feito</option>
         </select>
         </label>
     </p>

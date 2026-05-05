@@ -14,7 +14,7 @@ switch ($acao) {
         break;
 
     case 'edit':
-        require __DIR__ .'/../views/edit.php';
+        require __DIR__ . '/../views/edit.php';
         break;
 
     case 'delete':

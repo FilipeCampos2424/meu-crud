@@ -37,5 +37,6 @@ $tarefas = listar_tarefas();
 
             <?php if (count ($tarefas) === 0) : ?>
                 <tr><td colspan="5">Nnehuma tarefa cadastrada.</td></tr>
+                <?php endif; ?>
     </tbody>
 </table>

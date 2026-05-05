@@ -5,10 +5,9 @@ function db(): PDO {
     $db_name = 'crud_php';
     $user = 'root';
     $pass = '';
-
-    $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
+    $dsn = "mysql:host=$host;dbname=$db_name;charset=utf8mb4";
     $pdo = new PDO($dsn, $user, $pass, [
-        PDO::ATTTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES => false,
     ]);
